@@ -32,14 +32,17 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Song(getString(R.string.songFourTitle), getString(R.string.songFourSinger), 1,
                 getString(R.string.songFourPlayStoreLink), 0));
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        SongArrayAdapter arrayAdapter = new SongArrayAdapter(this, songs);
+        final ListView listView = (ListView) findViewById(R.id.list_view);
+        final SongArrayAdapter arrayAdapter = new SongArrayAdapter(this, songs);
         listView.setAdapter(arrayAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, SongActivity.class);
+                intent.putExtra("title", arrayAdapter.getItem(position).getmTitle());
+                intent.putExtra("singer", arrayAdapter.getItem(position).getmSinger());
+                intent.putExtra("duration", arrayAdapter.getItem(position).getmDuration());
                 startActivity(intent);
             }
         });
