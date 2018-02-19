@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,13 +17,24 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.songs_list);
+        setContentView(R.layout.activity_main);
+
+
+        ImageView searchImageView = (ImageView) findViewById(R.id.mainPage_SearchImageView);
+        searchImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SearhActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<Song> songs = new ArrayList<>();
-
         songs.add(new Song(getString(R.string.songOneTitle), getString(R.string.songOneSinger), 0,
                 getString(R.string.songOnePlayStoreLink), 0));
         songs.add(new Song(getString(R.string.songTwoTitle), getString(R.string.songTwoSinger), 1,

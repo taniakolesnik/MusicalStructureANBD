@@ -2,8 +2,6 @@ package com.example.android.musicalstructureanbd;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -35,7 +33,7 @@ public class SongActivity extends AppCompatActivity{
         song_duration.setText(String.valueOf(duration));
 
 
-        ImageView imageView = (ImageView) findViewById(R.id.home_imageView);
+        ImageView imageView = (ImageView) findViewById(R.id.songPage_homeImageView);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
