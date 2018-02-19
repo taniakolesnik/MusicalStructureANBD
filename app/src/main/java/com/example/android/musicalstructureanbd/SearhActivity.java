@@ -32,7 +32,7 @@ public class SearhActivity extends AppCompatActivity{
                 }
                 else {
                     Toast.makeText(SearhActivity.this, "Search doesn't work! Check for \"" +
-                            searchEditText.getText() + "\" in Google.", Toast.LENGTH_LONG).show();
+                            searchEditText.getText() + "\" in Google.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

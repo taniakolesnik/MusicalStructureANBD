@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">Musical Structure ANBD</string>
 
-    <string name="songOneTitle">Song One Title</string>
+    <string name="songOneTitle">Some nice song One</string>
     <string name="songOneSinger">Song One Singer</string>
-    <string name="songOnePlayStoreLink">Song One Link</string>
+    <string name="songOnePlayStoreLink">Buy link (feature does not work now, sorry)</string>
 
-    <string name="songTwoTitle">Song Two Title</string>
+    <string name="songTwoTitle">Some nice song Two</string>
     <string name="songTwoSinger">Song Two Singer</string>
-    <string name="songTwoPlayStoreLink">Song Two Link</string>
+    <string name="songTwoPlayStoreLink">Buy link (feature does not work now, sorry)</string>
 
-    <string name="songThreeTitle">Song Three Title</string>
+    <string name="songThreeTitle">Some nice song Three</string>
     <string name="songThreeSinger">Song Three Singer</string>
-    <string name="songThreePlayStoreLink">Song Three Link</string>
+    <string name="songThreePlayStoreLink">Buy link (feature does not work now, sorry)</string>
 
-    <string name="songFourTitle">Song Four Title</string>
-    <string name="songFourSinger">Song Four Singer</string>
-    <string name="songFourPlayStoreLink">Song Four Link</string>
+    <string name="songFourTitle">Some nice song Four</string>
+    <string name="songFourSinger">Singer Four</string>
+    <string name="songFourPlayStoreLink">Buy link (feature does not work now, sorry)</string>
 
 </resources>

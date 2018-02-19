@@ -38,4 +38,8 @@ public class Song {
         return mPlayStoreLink;
     }
 
+    public int getmThumbnail() {
+        return mThumbnail;
+    }
+
 }

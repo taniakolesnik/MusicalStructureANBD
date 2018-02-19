@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by tetianakolesnik on 18/02/2018.
@@ -22,15 +23,26 @@ public class SongActivity extends AppCompatActivity{
         String title = bundle.getString("title");
         String singer = bundle.getString("singer");
         int duration = bundle.getInt("duration");
+        String playStoreLink = bundle.getString("playStoreLink");
+        int thumbnail = bundle.getInt("thumbnail");
 
-        TextView song_title = (TextView) findViewById(R.id.song_title);
-        song_title.setText(title);
+        ImageView thumbnailView = (ImageView) findViewById(R.id.song_thumbnail);
+        thumbnailView.setImageResource(thumbnail);
 
-        TextView song_singer = (TextView) findViewById(R.id.song_singer);
-        song_singer.setText(singer);
+        TextView titleView = (TextView) findViewById(R.id.song_title);
+        titleView.setText(title);
 
-        TextView song_duration = (TextView) findViewById(R.id.song_duration);
-        song_duration.setText(String.valueOf(duration));
+        TextView singerView = (TextView) findViewById(R.id.song_singer);
+        singerView.setText(singer);
+
+        TextView durationView = (TextView) findViewById(R.id.song_duration);
+        durationView.setText(String.valueOf(duration));
+
+        TextView playStoreLinkView = (TextView) findViewById(R.id.playStoreLink);
+        playStoreLinkView.setText(String.valueOf(playStoreLink));
+
+
+
 
 
         ImageView imageView = (ImageView) findViewById(R.id.songPage_homeImageView);
@@ -39,6 +51,24 @@ public class SongActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(SongActivity.this, MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        ImageView favouriteView = (ImageView) findViewById(R.id.songPage_favouriteImageView);
+        favouriteView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SongActivity.this, "Song has been added to favourites!",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageView playView = (ImageView) findViewById(R.id.songPage_playmageView);
+        playView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SongActivity.this, "Let's imagine this song is being played now",
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }

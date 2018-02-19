@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         ImageView searchImageView = (ImageView) findViewById(R.id.mainPage_SearchImageView);
         searchImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ArrayList<Song> songs = new ArrayList<>();
-        songs.add(new Song(getString(R.string.songOneTitle), getString(R.string.songOneSinger), 0,
-                getString(R.string.songOnePlayStoreLink), 0));
-        songs.add(new Song(getString(R.string.songTwoTitle), getString(R.string.songTwoSinger), 1,
-                getString(R.string.songTwoPlayStoreLink), 0));
-        songs.add(new Song(getString(R.string.songThreeTitle), getString(R.string.songThreeSinger), 1,
-                getString(R.string.songThreePlayStoreLink), 0));
-        songs.add(new Song(getString(R.string.songFourTitle), getString(R.string.songFourSinger), 1,
-                getString(R.string.songFourPlayStoreLink), 0));
+        songs.add(new Song(getString(R.string.songOneTitle), getString(R.string.songOneSinger), 6,
+                getString(R.string.songOnePlayStoreLink), R.drawable.thumbnail_song_one));
+        songs.add(new Song(getString(R.string.songTwoTitle), getString(R.string.songTwoSinger), 5,
+                getString(R.string.songTwoPlayStoreLink), R.drawable.thumbnail_song_two));
+        songs.add(new Song(getString(R.string.songThreeTitle), getString(R.string.songThreeSinger), 4,
+                getString(R.string.songThreePlayStoreLink), R.drawable.thumbnail_song_three));
+        songs.add(new Song(getString(R.string.songFourTitle), getString(R.string.songFourSinger), 6,
+                getString(R.string.songFourPlayStoreLink), R.drawable.thumbnail_song_four));
 
         final ListView listView = (ListView) findViewById(R.id.list_view);
         final SongArrayAdapter arrayAdapter = new SongArrayAdapter(this, songs);
@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("title", arrayAdapter.getItem(position).getmTitle());
                 intent.putExtra("singer", arrayAdapter.getItem(position).getmSinger());
                 intent.putExtra("duration", arrayAdapter.getItem(position).getmDuration());
+                intent.putExtra("playStoreLink", arrayAdapter.getItem(position).getmPlayStoreLink());
+                intent.putExtra("thumbnail", arrayAdapter.getItem(position).getmThumbnail());
                 startActivity(intent);
             }
         });

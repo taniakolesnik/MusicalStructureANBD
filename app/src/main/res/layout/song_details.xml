@@ -2,48 +2,55 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_640x960">
+
+    <ImageView
+            android:id="@+id/song_thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:id="@+id/song"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_below="@id/song_thumbnail"
+        android:orientation="vertical"
+        android:layout_margin="40dp">
 
-        <ImageView
-            android:id="@+id/song_thumbnail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/song_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/SongInfoStyle"/>
         <TextView
             android:id="@+id/song_singer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/SongInfoStyle"/>
         <TextView
-            android:id="@+id/song_duration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/SongInfoStyle"
+            android:id="@+id/song_duration"/>
         <TextView
             android:id="@+id/playStoreLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/song_year"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/SongInfoStyle"/>
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/songPage_homeImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/MenuImageStyle"
         android:src="@drawable/home"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="50dp"/>
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/songPage_favouriteImageView"
+        style="@style/MenuImageStyle"
+        android:layout_toLeftOf="@id/songPage_homeImageView"
+        android:src="@drawable/favourite" />
+
+    <ImageView
+        android:id="@+id/songPage_playmageView"
+        style="@style/MenuImageStyle"
+        android:layout_toRightOf="@id/songPage_homeImageView"
+        android:src="@drawable/play" />
 
 </RelativeLayout>
