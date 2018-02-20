@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Musical Structure ANBD</string>
 
+    <string name="activity_name_search">SearhActivity</string>
+    <string name="activity_name_info">SongActivity</string>
+
     <string name="songOneTitle">Some nice song One</string>
     <string name="songOneSinger">Song One Singer</string>
     <string name="songOnePlayStoreLink">Buy link (feature does not work now, sorry)</string>

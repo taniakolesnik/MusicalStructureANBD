@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name=".SongActivity"
-            android:label="SongActivity"
+            android:label="@string/activity_name_info"
             android:parentActivityName=".MainActivity" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -27,7 +27,7 @@
         </activity>
         <activity
             android:name=".SearhActivity"
-            android:label="SearhActivity"
+            android:label="@string/activity_name_search"
             android:parentActivityName=".MainActivity" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data

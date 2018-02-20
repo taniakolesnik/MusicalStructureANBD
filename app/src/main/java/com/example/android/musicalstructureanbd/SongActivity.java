@@ -12,7 +12,7 @@ import android.widget.Toast;
  * Created by tetianakolesnik on 18/02/2018.
  */
 
-public class SongActivity extends AppCompatActivity{
+public class SongActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,34 +42,34 @@ public class SongActivity extends AppCompatActivity{
         playStoreLinkView.setText(String.valueOf(playStoreLink));
 
 
+        ImageView homeView = (ImageView) findViewById(R.id.songPage_homeImageView);
+        ImageView playView = (ImageView) findViewById(R.id.songPage_playmageView);
+        ImageView favouriteView = (ImageView) findViewById(R.id.songPage_favouriteImageView);
 
+        homeView.setOnClickListener(this);
+        playView.setOnClickListener(this);
+        favouriteView.setOnClickListener(this);
 
+    }
 
-        ImageView imageView = (ImageView) findViewById(R.id.songPage_homeImageView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.songPage_homeImageView:
                 Intent intent = new Intent(SongActivity.this, MainActivity.class);
                 startActivity(intent);
-            }
-        });
-
-        ImageView favouriteView = (ImageView) findViewById(R.id.songPage_favouriteImageView);
-        favouriteView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(SongActivity.this, "Song has been added to favourites!",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        ImageView playView = (ImageView) findViewById(R.id.songPage_playmageView);
-        playView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.songPage_playmageView:
                 Toast.makeText(SongActivity.this, "Let's imagine this song is being played now",
                         Toast.LENGTH_SHORT).show();
-            }
-        });
+                break;
+            case R.id.songPage_favouriteImageView:
+                Toast.makeText(SongActivity.this, "Song has been added to favourites!",
+                        Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+
     }
 }

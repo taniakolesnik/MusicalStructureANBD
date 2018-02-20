@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_layout_margin">20dp</dimen>
+    <dimen name="default_text_size">25sp</dimen>
+    <dimen name="default_small_text_size">20sp</dimen>
+    <dimen name="default_small_padding">8dp</dimen>
+    <dimen name="default_padding">20dp</dimen>
+    <dimen name="default_large_padding">40dp</dimen>
+</resources>

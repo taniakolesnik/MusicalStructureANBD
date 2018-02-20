@@ -13,21 +13,20 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
     </style>
 
     <style name="MenuImageStyle" >
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">15dp</item>
+        <item name="android:padding">@dimen/default_small_padding</item>
         <item name="android:layout_alignParentBottom">true</item>
     </style>
 
     <style name="ListStyle" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:text">TEST</item>
+        <item name="android:textSize">@dimen/default_small_text_size</item>
     </style>
 
 
